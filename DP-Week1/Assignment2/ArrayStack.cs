@@ -7,6 +7,7 @@ namespace Assignment2
     class ArrayStack : IStack
     {
         private int[] items;
+        
         private int count;
         private bool isEmpty;
         public int Count
@@ -38,6 +39,7 @@ namespace Assignment2
         public int MaxItems { get; set; }       
         public ArrayStack(int maxItems)
         {
+            items = new int[maxItems];
             MaxItems = maxItems;
         }
 
@@ -47,7 +49,7 @@ namespace Assignment2
             {
                 for (int i = 0; i < items.Length; i++)
                 {
-                    items[i] = value;
+                    items[i] += value;
                 }
             }
             catch (Exception)
@@ -61,9 +63,23 @@ namespace Assignment2
         }
         public int Pop()
         {
-            int lastItem = items[items.Length - 1];
-            int removeItem = items.;
-            return lastItem;
+            try
+            {
+                int lastItem = 0;
+                for (int i = items.Length - 1; i >= 0; i--)
+                {
+                    //items[i] -= lastItem;  
+                    lastItem += items[i];
+                }
+                //int removeItem = items.;
+                return lastItem;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
         public bool Contains(int value)
         {
