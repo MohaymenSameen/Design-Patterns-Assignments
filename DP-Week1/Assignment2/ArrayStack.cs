@@ -6,78 +6,62 @@ namespace Assignment2
 {
     class ArrayStack : IStack
     {
-        private int[] items;
-        
-        private int count;
+        private int[] items;        
         private bool isEmpty;
-        public int Count
-        {
-            get { return count; }
-            set
-            {
-                for (int i = 0; i < items.Length; i++)
-                {
-                    count++;
-                }
-            }
-        }
-        public bool IsEmpty
-        {
-            get { return isEmpty; }
-            set
-            {
-                if(items.Length == 0)
-                {
-                    isEmpty = true;
-                }
-                else
-                {
-                    isEmpty = false;
-                }                
-            }
-        }
+        private int count;
+        private int currentIndex;
+        public int Count { get { return count; } }        
+        public bool IsEmpty { get { return isEmpty; } }  
         public int MaxItems { get; set; }       
         public ArrayStack(int maxItems)
         {
             items = new int[maxItems];
             MaxItems = maxItems;
+            currentIndex = 0;
         }
 
         public void Push(int value)
         {
             try
             {
-                for (int i = 0; i < items.Length; i++)
-                {
-                    items[i] += value;
-                }
+                items[currentIndex] = value;
+                currentIndex++;                
+                count++;
             }
             catch (Exception)
             {
                 if(items.Length == MaxItems)
-                {                    
-                    Console.WriteLine("Stack is full");
+                {
+                    throw new Exception("stack is full");
                 }                
             }
             
         }
         public int Pop()
-        {
+        {            
             try
             {
-                int lastItem = 0;
-                for (int i = items.Length - 1; i >= 0; i--)
+                currentIndex--;
+                count--;
+                while (currentIndex < 0)
                 {
-                    //items[i] -= lastItem;  
-                    lastItem += items[i];
+                    currentIndex += items.Length;
+                }               
+
+                if (count == 0)
+                {
+                    isEmpty = true;
                 }
-                //int removeItem = items.;
-                return lastItem;
+                else
+                {
+                    isEmpty = false;
+                }             
+
+                return items[currentIndex];
             }
             catch (Exception)
             {
-
-                throw;
+                throw new Exception("Stack is empty");
             }
             
         }
@@ -91,7 +75,6 @@ namespace Assignment2
                 }
             }
             return false;
-        }
-        
+        }        
     }
 }
