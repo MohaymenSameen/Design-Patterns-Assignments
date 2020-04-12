@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Assignment3
 {
-    class PencilSharpener
+    class PencilSharpener : IPencilSharpener
     {
+        public void Sharpen(IPencil pencil)
+        {
+            pencil.AfterSharpening();
+        }
     }
 }

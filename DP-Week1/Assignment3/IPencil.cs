@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Assignment3
 {
-    interface IPencil
+    public interface IPencil
     {
         bool CanWrite { get; }
         void Write(string message);

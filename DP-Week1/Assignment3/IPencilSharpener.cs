@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Assignment3
 {
-    interface IPencilSharpener
+    public interface IPencilSharpener
     {
         void Sharpen(IPencil pencil);
     }
