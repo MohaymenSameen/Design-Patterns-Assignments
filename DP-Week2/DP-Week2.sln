@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment1", "Assignment1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConwayGameOfLife-student", "ConwayGameOfLife-student\ConwayGameOfLife-student.csproj", "{B173BA7E-1DC2-4B08-B4C6-168A2C05C6B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment3", "Assignment3\Assignment3.csproj", "{68F8CB73-5CA5-462B-A9EB-58F7EAB0A219}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B173BA7E-1DC2-4B08-B4C6-168A2C05C6B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B173BA7E-1DC2-4B08-B4C6-168A2C05C6B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B173BA7E-1DC2-4B08-B4C6-168A2C05C6B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68F8CB73-5CA5-462B-A9EB-58F7EAB0A219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68F8CB73-5CA5-462B-A9EB-58F7EAB0A219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68F8CB73-5CA5-462B-A9EB-58F7EAB0A219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68F8CB73-5CA5-462B-A9EB-58F7EAB0A219}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
