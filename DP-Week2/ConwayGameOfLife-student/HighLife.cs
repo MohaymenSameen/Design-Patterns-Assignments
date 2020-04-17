@@ -8,18 +8,18 @@ namespace ConwayGameOfLife
 {
     public class HighLife : ConwayGameOfLife
     {
-        public override bool CellShouldLive(bool livingCell, int neighbourCount)
-        {
+       public override bool CellShouldLive(bool livingCell, int neighbourCount)
+       {
             // with 3 neighbour cell will live
-            if (neighbourCount == 3)
+            if (neighbourCount == 3 || neighbourCount == 6)
                 return true;
 
             // live cell with 2 neighbours stays alive
-            if (livingCell && neighbourCount == 2)
+            if ((livingCell && neighbourCount == 3) || (livingCell && neighbourCount == 2))
                 return true;
 
             // dead cell
             return false;
-        }
+       }
     }
 }

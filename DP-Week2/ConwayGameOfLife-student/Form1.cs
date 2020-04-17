@@ -16,7 +16,7 @@ namespace ConwayGameOfLife
     private void Form1_Load(object sender, EventArgs e)
     {
       // create a game
-      game = new HighLife();
+      game = new StandardLife();
 
       // start the timer
       timer1.Enabled = true;
@@ -39,5 +39,27 @@ namespace ConwayGameOfLife
     {
       this.game.Reset();
     }
-  }
+
+    private void standardLifeBtn_Click(object sender, EventArgs e)
+    {
+        //start with a standard life
+        game = new StandardLife();
+
+        // start the timer
+        timer1.Enabled = true;
+
+        this.DoubleBuffered = true;
+    }
+
+    private void highLifeBtn_Click(object sender, EventArgs e)
+    {
+        //start with a high life 
+        game = new HighLife();
+
+        // start the timer
+        timer1.Enabled = true;
+
+        this.DoubleBuffered = true;
+    }
+    }
 }
