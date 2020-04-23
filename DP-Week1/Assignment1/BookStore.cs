@@ -13,15 +13,11 @@ namespace Assignment1
             items = new List<BookStoreItem>();
         }
 
-        public List<BookStoreItem> Add()
+        public void Add(BookStoreItem item)
         {
-            foreach(BookStoreItem item in items)
-            {
-                items.Add(item);
-            }
-            return items;
+            items.Add(item);
         }
-        public void PrintAllItems(List<BookStoreItem> items)
+        public void PrintAllItems()
         {
             foreach(BookStoreItem item in items)
             {                

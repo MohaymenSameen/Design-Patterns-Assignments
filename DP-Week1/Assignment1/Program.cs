@@ -18,17 +18,15 @@ namespace Assignment1
             Book book2 = new Book("Joe speedboot", 12.50f, 3, "Tommy Wieringa");
             Magazine magazine1 = new Magazine("Time", 3.90f, 10, DayOfWeek.Friday);
             Magazine magazine2 = new Magazine("Donald Duck", 2.50f, 15, DayOfWeek.Thursday);
-            CD cd1 = new CD("Seventeen Seconds", 3.90f, 5, "The Cure");
-           
-            List <BookStoreItem> items = bookStore.Add();
+            CD cd1 = new CD("Seventeen Seconds", 3.90f, 5, "The Cure");           
             
-            items.Add(book1);
-            items.Add(book2);
-            items.Add(magazine1);
-            items.Add(magazine2);
-            items.Add(cd1);
+            bookStore.Add(book1);
+            bookStore.Add(book2);
+            bookStore.Add(magazine1);
+            bookStore.Add(magazine2);
+            bookStore.Add(cd1);
 
-            bookStore.PrintAllItems(items);
+            bookStore.PrintAllItems();
 
             Console.ReadKey();
         }
