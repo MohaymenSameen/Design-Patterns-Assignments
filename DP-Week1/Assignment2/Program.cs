@@ -47,7 +47,8 @@ namespace Assignment2
                 {
                     Console.WriteLine();
                     Console.WriteLine("{0} exists within stack", value);
-                }                
+                }    
+                
             }
         }
     }

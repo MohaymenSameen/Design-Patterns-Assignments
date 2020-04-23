@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Assignment2
 {
     class ArrayStack : IStack
     {
-        private int[] items;        
-        private bool isEmpty;
+        private int[] items;
         private int count;
         private int currentIndex;
         public int Count { get { return count; } }        
-        public bool IsEmpty { get { return isEmpty; } }  
+        public bool IsEmpty { get { return count==0; } }  
         public int MaxItems { get; set; }       
         public ArrayStack(int maxItems)
         {
@@ -21,59 +21,36 @@ namespace Assignment2
         }
 
         public void Push(int value)
-        {
-            try
-            {
-                items[currentIndex] = value;
-                currentIndex++;                
-                count++;
-            }
-            catch (Exception)
-            {
-                if(items.Length == MaxItems)
-                {
-                    throw new Exception("stack is full");
-                }                
-            }
+        {            
+            items[currentIndex] = value;
+            currentIndex++;                
+            count++;
             
+            if(count == MaxItems)
+            {
+                throw new Exception("Stack is full");
+            }            
         }
         public int Pop()
-        {            
-            try
-            {
-                currentIndex--;
-                count--;
-                while (currentIndex < 0)
-                {
-                    currentIndex += items.Length;
-                }               
-
-                if (count == 0)
-                {
-                    isEmpty = true;
-                }
-                else
-                {
-                    isEmpty = false;
-                }             
-
-                return items[currentIndex];
-            }
-            catch (Exception)
+        {           
+            if(count == 0)
             {
                 throw new Exception("Stack is empty");
             }
-            
+            currentIndex--;
+            count--;                    
+
+            return items[currentIndex];           
         }
         public bool Contains(int value)
         {
-            for (int i = 0; i < items.Length; i++)
+            foreach (int item in items)
             {
-                if(items[i] == value)
+                if(items.Contains(value))
                 {
                     return true;
                 }
-            }
+            }          
             return false;
         }        
     }
