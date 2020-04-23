@@ -7,9 +7,8 @@ namespace Assignment3
     public class Pencil : IPencil
     {
         private int maxToWrite;
-        private int nrOfCharsWritten;
-        private bool canWrite;
-        public bool CanWrite { get { return canWrite; } }
+        private int nrOfCharsWritten;        
+        public bool CanWrite { get { return nrOfCharsWritten < maxToWrite; } }
 
         public Pencil()
         {
@@ -21,15 +20,13 @@ namespace Assignment3
             string word = "";
             foreach (Char c in message)
             {
-                if (nrOfCharsWritten > maxToWrite)
-                {
-                    canWrite = false;
+                if (!CanWrite)
+                {                    
                     word += "#";
                 }
                 else
                 {
-                    word += c;
-                    canWrite = true;
+                    word += c;                    
                 }              
                 nrOfCharsWritten++;
             }            
@@ -37,8 +34,7 @@ namespace Assignment3
         }
         public void AfterSharpening()
         {
-            nrOfCharsWritten = 0;
-            canWrite = true;
+            nrOfCharsWritten = 0;            
         }
     }
 }
