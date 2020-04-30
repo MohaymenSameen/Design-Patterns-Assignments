@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Assignment1
 {
-    interface ITrainJourney
+    public interface ITrainJourney
     {
+        void AddObserver(ITrainDisplay observer);
+        void RemoveObserver(ITrainDisplay observer);
+        void NextStation();
     }
 }

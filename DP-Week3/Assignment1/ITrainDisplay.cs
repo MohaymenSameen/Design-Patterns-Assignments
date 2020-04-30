@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment1
 {
-    interface ITrainDisplay
+    public interface ITrainDisplay
     {
     }
 }
