@@ -28,12 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lblCurrentStation = new System.Windows.Forms.Label();
+            this.lblCurrentStationTxt = new System.Windows.Forms.Label();
+            this.lblRailwayTrack = new System.Windows.Forms.Label();
+            this.lblRailwayTrackTxt = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // lblCurrentStation
+            // 
+            this.lblCurrentStation.AutoSize = true;
+            this.lblCurrentStation.Location = new System.Drawing.Point(81, 116);
+            this.lblCurrentStation.Name = "lblCurrentStation";
+            this.lblCurrentStation.Size = new System.Drawing.Size(162, 25);
+            this.lblCurrentStation.TabIndex = 0;
+            this.lblCurrentStation.Text = "Current Station:";
+            // 
+            // lblCurrentStationTxt
+            // 
+            this.lblCurrentStationTxt.AutoSize = true;
+            this.lblCurrentStationTxt.Location = new System.Drawing.Point(361, 116);
+            this.lblCurrentStationTxt.Name = "lblCurrentStationTxt";
+            this.lblCurrentStationTxt.Size = new System.Drawing.Size(70, 25);
+            this.lblCurrentStationTxt.TabIndex = 1;
+            this.lblCurrentStationTxt.Text = "label2";
+            // 
+            // lblRailwayTrack
+            // 
+            this.lblRailwayTrack.AutoSize = true;
+            this.lblRailwayTrack.Location = new System.Drawing.Point(90, 208);
+            this.lblRailwayTrack.Name = "lblRailwayTrack";
+            this.lblRailwayTrack.Size = new System.Drawing.Size(153, 25);
+            this.lblRailwayTrack.TabIndex = 2;
+            this.lblRailwayTrack.Text = "Railway Track:";
+            // 
+            // lblRailwayTrackTxt
+            // 
+            this.lblRailwayTrackTxt.AutoSize = true;
+            this.lblRailwayTrackTxt.Location = new System.Drawing.Point(361, 208);
+            this.lblRailwayTrackTxt.Name = "lblRailwayTrackTxt";
+            this.lblRailwayTrackTxt.Size = new System.Drawing.Size(70, 25);
+            this.lblRailwayTrackTxt.TabIndex = 3;
+            this.lblRailwayTrackTxt.Text = "label4";
+            // 
+            // TrainDisplay
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblRailwayTrackTxt);
+            this.Controls.Add(this.lblRailwayTrack);
+            this.Controls.Add(this.lblCurrentStationTxt);
+            this.Controls.Add(this.lblCurrentStation);
+            this.Name = "TrainDisplay";
             this.Text = "TrainDisplay";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblCurrentStation;
+        private System.Windows.Forms.Label lblCurrentStationTxt;
+        private System.Windows.Forms.Label lblRailwayTrack;
+        private System.Windows.Forms.Label lblRailwayTrackTxt;
     }
 }

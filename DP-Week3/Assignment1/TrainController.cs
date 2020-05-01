@@ -8,5 +8,15 @@ namespace Assignment1
 {
     public class TrainController : ITrainController
     {
+        private ITrainJourney journey;
+
+        public TrainController(ITrainJourney journey)
+        {
+            this.journey = journey;
+        }
+        public void NextStation()
+        {
+            journey.NextStation();
+        }
     }
 }

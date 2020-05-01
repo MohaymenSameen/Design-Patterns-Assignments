@@ -11,6 +11,7 @@ namespace Assignment1
         private List<TrainStation> stations;
         private List<ITrainDisplay> observers;
         private TrainStation currentStation;
+        public TrainStation CurrentStation { get { return currentStation; } }
         public TrainJourney()
         {
             stations = new List<TrainStation>();
@@ -19,6 +20,7 @@ namespace Assignment1
             stations.Add(new TrainStation("Den Helder","Arnhem Central",DateTime.Parse("23:04:00"),DateTime.Parse("01:30:00")));
             stations.Add(new TrainStation("Arnhem Central", "Nijmegen", DateTime.Parse("01:35:00"), DateTime.Parse("02:20:00")));
         }
+       
         public void AddObserver(ITrainDisplay observer)
         {
             observers.Add(observer);
@@ -26,10 +28,21 @@ namespace Assignment1
         public void RemoveObserver(ITrainDisplay observer)
         {
             observers.Remove(observer);
-        }
-        public void Next()
+        }       
+        public void NextStation()
         {
-
+            foreach (TrainStation station in stations)
+            {
+                currentStation = station; 
+            }
+            NotifyDisplayObservers();
+        }
+        private void NotifyDisplayObservers()
+        {
+            foreach (ITrainDisplay observer in observers)
+            {
+                observer.Update(CurrentStation);
+            }
         }
     }
 }

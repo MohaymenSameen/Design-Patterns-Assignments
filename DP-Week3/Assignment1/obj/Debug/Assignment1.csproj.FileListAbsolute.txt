@@ -1,0 +1,6 @@
+C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\obj\Debug\Assignment1.csprojAssemblyReference.cache
+C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\obj\Debug\Assignment1.ControlPanel.resources
+C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\obj\Debug\Assignment1.Properties.Resources.resources
+C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\obj\Debug\Assignment1.TrainDisplay.resources
+C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\obj\Debug\Assignment1.csproj.GenerateResource.cache
+C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\obj\Debug\Assignment1.csproj.CoreCompileInputs.cache

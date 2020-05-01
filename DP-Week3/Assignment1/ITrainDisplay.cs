@@ -8,5 +8,6 @@ namespace Assignment1
 {
     public interface ITrainDisplay
     {
+        void Update(TrainStation station);
     }
 }

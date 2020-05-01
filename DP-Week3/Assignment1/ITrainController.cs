@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Assignment1
 {
-    interface ITrainController
+    public interface ITrainController
     {
+        void NextStation();
     }
 }
