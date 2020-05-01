@@ -12,19 +12,22 @@ namespace Assignment1
 {
     public partial class ControlPanel : Form
     {
-        private ITrainController controller;        
-        public ControlPanel(ITrainController controller)
+        private ITrainController controller;
+        private ITrainJourney journey;
+        public ControlPanel()
         {
             InitializeComponent();
-            this.controller = controller;
+            journey = new TrainJourney();
+            controller = new TrainController(journey);
         }
         private void btnNextStation_Click(object sender, EventArgs e)
-        {
+        {            
             controller.NextStation();
         }
         private void btnNewDisplay_Click(object sender, EventArgs e)
         {
-            Form display = new TrainDisplay();
+            TrainDisplay display = new TrainDisplay(journey);
+            display.Show();
         }
     }
 }

@@ -48,9 +48,8 @@
             this.lblCurrentStationTxt.AutoSize = true;
             this.lblCurrentStationTxt.Location = new System.Drawing.Point(361, 116);
             this.lblCurrentStationTxt.Name = "lblCurrentStationTxt";
-            this.lblCurrentStationTxt.Size = new System.Drawing.Size(70, 25);
+            this.lblCurrentStationTxt.Size = new System.Drawing.Size(0, 50);
             this.lblCurrentStationTxt.TabIndex = 1;
-            this.lblCurrentStationTxt.Text = "label2";
             // 
             // lblRailwayTrack
             // 
@@ -66,21 +65,21 @@
             this.lblRailwayTrackTxt.AutoSize = true;
             this.lblRailwayTrackTxt.Location = new System.Drawing.Point(361, 208);
             this.lblRailwayTrackTxt.Name = "lblRailwayTrackTxt";
-            this.lblRailwayTrackTxt.Size = new System.Drawing.Size(70, 25);
+            this.lblRailwayTrackTxt.Size = new System.Drawing.Size(0, 50);
             this.lblRailwayTrackTxt.TabIndex = 3;
-            this.lblRailwayTrackTxt.Text = "label4";
             // 
             // TrainDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(589, 342);
             this.Controls.Add(this.lblRailwayTrackTxt);
             this.Controls.Add(this.lblRailwayTrack);
             this.Controls.Add(this.lblCurrentStationTxt);
             this.Controls.Add(this.lblCurrentStation);
             this.Name = "TrainDisplay";
             this.Text = "TrainDisplay";
+            this.Load += new System.EventHandler(this.TrainDisplay_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -17,8 +17,13 @@ namespace Assignment1
             stations = new List<TrainStation>();
             observers = new List<ITrainDisplay>();
 
-            stations.Add(new TrainStation("Den Helder","Arnhem Central",DateTime.Parse("23:04:00"),DateTime.Parse("01:30:00")));
-            stations.Add(new TrainStation("Arnhem Central", "Nijmegen", DateTime.Parse("01:35:00"), DateTime.Parse("02:20:00")));
+            stations.Add(new TrainStation("Den Helder",2,DateTime.Parse("22:04:00"),DateTime.Parse("22:08:00")));
+            stations.Add(new TrainStation("Anna Paulowna", 1, DateTime.Parse("22:14:00"), DateTime.Parse("22:15:00")));
+            stations.Add(new TrainStation("Schagen", 1, DateTime.Parse("22:22:00"), DateTime.Parse("22:31:00")));
+            stations.Add(new TrainStation("Heerhugowaard", 1, DateTime.Parse("22:31:00"), DateTime.Parse("22:36:00")));
+            
+            //so that the form loads with the first station in the list and is not null
+            currentStation = stations[0];
         }
        
         public void AddObserver(ITrainDisplay observer)
@@ -30,14 +35,14 @@ namespace Assignment1
             observers.Remove(observer);
         }       
         public void NextStation()
-        {
-            foreach (TrainStation station in stations)
-            {
-                currentStation = station; 
-            }
-            NotifyDisplayObservers();
+        {            
+            int stationNum = 0;
+            currentStation = stations[stationNum];
+            stationNum++;
+            
+            NotifyObservers();
         }
-        private void NotifyDisplayObservers()
+        private void NotifyObservers()
         {
             foreach (ITrainDisplay observer in observers)
             {

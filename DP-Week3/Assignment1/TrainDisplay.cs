@@ -10,11 +10,24 @@ using System.Windows.Forms;
 
 namespace Assignment1
 {
-    public partial class TrainDisplay : Form
+    public partial class TrainDisplay : Form, ITrainDisplay
     {
-        public TrainDisplay()
+        private ITrainJourney journey;       
+        public TrainDisplay(ITrainJourney journey)
         {
             InitializeComponent();
+            this.journey = journey;            
+            this.journey.AddObserver(this);
+        }
+        public void Update(TrainStation station)
+        {
+            lblCurrentStationTxt.Text = station.Name;
+            lblRailwayTrackTxt.Text = station.ArrivalTrack.ToString();
+        }
+        private void TrainDisplay_Load(object sender, EventArgs e)
+        {
+            lblCurrentStationTxt.Text = journey.CurrentStation.Name;
+            lblRailwayTrackTxt.Text = journey.CurrentStation.ArrivalTrack.ToString();
         }
     }
 }

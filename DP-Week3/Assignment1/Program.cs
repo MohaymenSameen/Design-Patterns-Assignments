@@ -7,6 +7,7 @@ using System.Windows.Forms;
 namespace Assignment1
 {
     static class Program
+
     {
         /// <summary>
         /// The main entry point for the application.
@@ -15,7 +16,7 @@ namespace Assignment1
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);           
+            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ControlPanel());
         }
     }
