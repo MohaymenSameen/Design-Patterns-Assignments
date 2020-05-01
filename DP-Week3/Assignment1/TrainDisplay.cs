@@ -18,16 +18,19 @@ namespace Assignment1
             InitializeComponent();
             this.journey = journey;            
             this.journey.AddObserver(this);
+        }       
+        private void TrainDisplay_Load(object sender, EventArgs e)
+        {           
+            lblCurrentStationTxt.Text = journey.CurrentStation.Name;
+            lblRailwayTrackTxt.Text = journey.CurrentStation.ArrivalTrack.ToString();
+            lblArrivalTimeTxt.Text = journey.CurrentStation.ArrivalTime.ToString();
+           
         }
         public void Update(TrainStation station)
         {
             lblCurrentStationTxt.Text = station.Name;
             lblRailwayTrackTxt.Text = station.ArrivalTrack.ToString();
-        }
-        private void TrainDisplay_Load(object sender, EventArgs e)
-        {
-            lblCurrentStationTxt.Text = journey.CurrentStation.Name;
-            lblRailwayTrackTxt.Text = journey.CurrentStation.ArrivalTrack.ToString();
+            lblArrivalTimeTxt.Text = station.ArrivalTime.ToString();
         }
     }
 }

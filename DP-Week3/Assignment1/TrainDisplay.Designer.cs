@@ -32,12 +32,14 @@
             this.lblCurrentStationTxt = new System.Windows.Forms.Label();
             this.lblRailwayTrack = new System.Windows.Forms.Label();
             this.lblRailwayTrackTxt = new System.Windows.Forms.Label();
+            this.lblArrivalTimeTxt = new System.Windows.Forms.Label();
+            this.lblArrivalTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCurrentStation
             // 
             this.lblCurrentStation.AutoSize = true;
-            this.lblCurrentStation.Location = new System.Drawing.Point(81, 116);
+            this.lblCurrentStation.Location = new System.Drawing.Point(115, 93);
             this.lblCurrentStation.Name = "lblCurrentStation";
             this.lblCurrentStation.Size = new System.Drawing.Size(162, 25);
             this.lblCurrentStation.TabIndex = 0;
@@ -46,15 +48,16 @@
             // lblCurrentStationTxt
             // 
             this.lblCurrentStationTxt.AutoSize = true;
-            this.lblCurrentStationTxt.Location = new System.Drawing.Point(361, 116);
+            this.lblCurrentStationTxt.Location = new System.Drawing.Point(332, 93);
             this.lblCurrentStationTxt.Name = "lblCurrentStationTxt";
-            this.lblCurrentStationTxt.Size = new System.Drawing.Size(0, 50);
+            this.lblCurrentStationTxt.Size = new System.Drawing.Size(76, 25);
             this.lblCurrentStationTxt.TabIndex = 1;
+            this.lblCurrentStationTxt.Text = "station";
             // 
             // lblRailwayTrack
             // 
             this.lblRailwayTrack.AutoSize = true;
-            this.lblRailwayTrack.Location = new System.Drawing.Point(90, 208);
+            this.lblRailwayTrack.Location = new System.Drawing.Point(115, 161);
             this.lblRailwayTrack.Name = "lblRailwayTrack";
             this.lblRailwayTrack.Size = new System.Drawing.Size(153, 25);
             this.lblRailwayTrack.TabIndex = 2;
@@ -63,16 +66,37 @@
             // lblRailwayTrackTxt
             // 
             this.lblRailwayTrackTxt.AutoSize = true;
-            this.lblRailwayTrackTxt.Location = new System.Drawing.Point(361, 208);
+            this.lblRailwayTrackTxt.Location = new System.Drawing.Point(332, 161);
             this.lblRailwayTrackTxt.Name = "lblRailwayTrackTxt";
-            this.lblRailwayTrackTxt.Size = new System.Drawing.Size(0, 50);
+            this.lblRailwayTrackTxt.Size = new System.Drawing.Size(59, 25);
             this.lblRailwayTrackTxt.TabIndex = 3;
+            this.lblRailwayTrackTxt.Text = "track";
+            // 
+            // lblArrivalTimeTxt
+            // 
+            this.lblArrivalTimeTxt.AutoSize = true;
+            this.lblArrivalTimeTxt.Location = new System.Drawing.Point(332, 231);
+            this.lblArrivalTimeTxt.Name = "lblArrivalTimeTxt";
+            this.lblArrivalTimeTxt.Size = new System.Drawing.Size(73, 25);
+            this.lblArrivalTimeTxt.TabIndex = 4;
+            this.lblArrivalTimeTxt.Text = "Arrival";
+            // 
+            // lblArrivalTime
+            // 
+            this.lblArrivalTime.AutoSize = true;
+            this.lblArrivalTime.Location = new System.Drawing.Point(115, 231);
+            this.lblArrivalTime.Name = "lblArrivalTime";
+            this.lblArrivalTime.Size = new System.Drawing.Size(126, 25);
+            this.lblArrivalTime.TabIndex = 5;
+            this.lblArrivalTime.Text = "Arrival Time";
             // 
             // TrainDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 342);
+            this.Controls.Add(this.lblArrivalTime);
+            this.Controls.Add(this.lblArrivalTimeTxt);
             this.Controls.Add(this.lblRailwayTrackTxt);
             this.Controls.Add(this.lblRailwayTrack);
             this.Controls.Add(this.lblCurrentStationTxt);
@@ -91,5 +115,7 @@
         private System.Windows.Forms.Label lblCurrentStationTxt;
         private System.Windows.Forms.Label lblRailwayTrack;
         private System.Windows.Forms.Label lblRailwayTrackTxt;
+        private System.Windows.Forms.Label lblArrivalTimeTxt;
+        private System.Windows.Forms.Label lblArrivalTime;
     }
 }

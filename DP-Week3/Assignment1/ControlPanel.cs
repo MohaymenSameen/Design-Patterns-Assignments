@@ -14,20 +14,24 @@ namespace Assignment1
     {
         private ITrainController controller;
         private ITrainJourney journey;
+        private int count;
         public ControlPanel()
         {
             InitializeComponent();
             journey = new TrainJourney();
             controller = new TrainController(journey);
+            count = 1;
         }
         private void btnNextStation_Click(object sender, EventArgs e)
         {            
             controller.NextStation();
         }
         private void btnNewDisplay_Click(object sender, EventArgs e)
-        {
+        {            
             TrainDisplay display = new TrainDisplay(journey);
+            display.Text = String.Format("Train display #{0}", count);
             display.Show();
+            count++;
         }
     }
 }
