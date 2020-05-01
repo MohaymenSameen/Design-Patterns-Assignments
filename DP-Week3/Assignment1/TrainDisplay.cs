@@ -23,8 +23,7 @@ namespace Assignment1
         {           
             lblCurrentStationTxt.Text = journey.CurrentStation.Name;
             lblRailwayTrackTxt.Text = journey.CurrentStation.ArrivalTrack.ToString();
-            lblArrivalTimeTxt.Text = journey.CurrentStation.ArrivalTime.ToString();
-           
+            lblArrivalTimeTxt.Text = journey.CurrentStation.ArrivalTime.ToString();           
         }
         public void Update(TrainStation station)
         {
