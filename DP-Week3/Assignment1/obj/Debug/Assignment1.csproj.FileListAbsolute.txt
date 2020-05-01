@@ -4,3 +4,8 @@ C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\As
 C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\obj\Debug\Assignment1.TrainDisplay.resources
 C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\obj\Debug\Assignment1.csproj.GenerateResource.cache
 C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\obj\Debug\Assignment1.csproj.CoreCompileInputs.cache
+C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\bin\Debug\Assignment1.exe.config
+C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\bin\Debug\Assignment1.exe
+C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\bin\Debug\Assignment1.pdb
+C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\obj\Debug\Assignment1.exe
+C:\Users\lemon\OneDrive\Documents\GitHub\Design-Patterns-Assignments\DP-Week3\Assignment1\obj\Debug\Assignment1.pdb

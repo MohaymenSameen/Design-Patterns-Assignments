@@ -12,7 +12,7 @@ namespace Assignment1
 {
     public partial class ControlPanel : Form
     {
-        private ITrainController controller;
+        private ITrainController controller;        
         public ControlPanel(ITrainController controller)
         {
             InitializeComponent();
