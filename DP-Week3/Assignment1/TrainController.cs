@@ -15,7 +15,7 @@ namespace Assignment1
             this.journey = journey;
         }
         public void NextStation()
-        {
+        {            
             journey.NextStation();
         }
     }

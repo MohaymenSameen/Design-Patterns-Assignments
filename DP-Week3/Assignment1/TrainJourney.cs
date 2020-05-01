@@ -11,6 +11,7 @@ namespace Assignment1
         private List<TrainStation> stations;
         private List<ITrainDisplay> observers;
         private TrainStation currentStation;
+        private int index;
         public TrainStation CurrentStation { get { return currentStation; } }
         public TrainJourney()
         {
@@ -24,6 +25,7 @@ namespace Assignment1
             
             //so that the form loads with the first station in the list and is not null
             currentStation = stations[0];
+            index = 0;
         }
        
         public void AddObserver(ITrainDisplay observer)
@@ -35,13 +37,18 @@ namespace Assignment1
             observers.Remove(observer);
         }       
         public void NextStation()
-        {            
-            int stationNum = 0;
-            currentStation = stations[stationNum];
-            stationNum++;
+        {
+            //if index reaches last station, reverse list and start index from 0
+            if (index >= stations.Count)
+            {
+                stations.Reverse();
+                index = 0;
+            }
+            index += 1;
+            currentStation = stations[index];                  
             
             NotifyObservers();
-        }
+        }        
         private void NotifyObservers()
         {
             foreach (ITrainDisplay observer in observers)
