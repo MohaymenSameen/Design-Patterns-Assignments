@@ -6,6 +6,6 @@ namespace Assignment1
 {
     public interface IWeaponBehaviour
     {
-
+        public void UseWeapon();
     }
 }

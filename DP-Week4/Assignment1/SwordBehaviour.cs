@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Assignment1
 {
-    class SwordBehaviour
+    public class SwordBehaviour : IWeaponBehaviour
     {
+        public void UseWeapon()
+        {
+            Console.WriteLine("Swinging a sword");
+        }
     }
 }

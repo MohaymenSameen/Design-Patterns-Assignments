@@ -4,8 +4,21 @@ using System.Text;
 
 namespace Assignment1
 {
-    abstract class Character
+    public abstract class Character
     {
-        
+        private IWeaponBehaviour weapon;
+        public IWeaponBehaviour Weapon
+        { 
+            get { return weapon; }
+            set { weapon = value; }
+        }        
+        public Character()
+        {
+            weapon = new SwordBehaviour();
+        }        
+        public void Fight()
+        {
+            weapon.UseWeapon();
+        }
     }
 }

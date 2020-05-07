@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Assignment1
 {
-    class Troll
+    public class Troll : Character
     {
+        public Troll()
+        {
+            Weapon = new AxeBehaviour();
+        }
     }
 }

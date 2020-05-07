@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Assignment1
 {
-    class Knight
+    public class Knight : Character
     {
+        public Knight()
+        {
+            Weapon = new SwordBehaviour();
+        }
     }
 }
