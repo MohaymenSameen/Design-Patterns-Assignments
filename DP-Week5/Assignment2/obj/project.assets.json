@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lemon\\OneDrive\\Documents\\GitHub\\Design-Patterns-Assignments\\DP-Week5\\Assignment1\\Assignment1.csproj",
-      "projectName": "Assignment1",
-      "projectPath": "C:\\Users\\lemon\\OneDrive\\Documents\\GitHub\\Design-Patterns-Assignments\\DP-Week5\\Assignment1\\Assignment1.csproj",
+      "projectUniqueName": "C:\\Users\\lemon\\OneDrive\\Documents\\GitHub\\Design-Patterns-Assignments\\DP-Week5\\Assignment2\\Assignment2.csproj",
+      "projectName": "Assignment2",
+      "projectPath": "C:\\Users\\lemon\\OneDrive\\Documents\\GitHub\\Design-Patterns-Assignments\\DP-Week5\\Assignment2\\Assignment2.csproj",
       "packagesPath": "C:\\Users\\lemon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lemon\\OneDrive\\Documents\\GitHub\\Design-Patterns-Assignments\\DP-Week5\\Assignment1\\obj\\",
+      "outputPath": "C:\\Users\\lemon\\OneDrive\\Documents\\GitHub\\Design-Patterns-Assignments\\DP-Week5\\Assignment2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lemon\\AppData\\Roaming\\NuGet\\NuGet.Config",
