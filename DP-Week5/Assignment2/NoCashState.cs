@@ -29,7 +29,7 @@ namespace Assignment2
         }
         public void WithdrawCash(int amount)
         {
-            Console.WriteLine("{0} withdrawn from machine.", amount);
+            Console.WriteLine("Not enough cash available in machine.");
             Console.WriteLine();
         }
     }

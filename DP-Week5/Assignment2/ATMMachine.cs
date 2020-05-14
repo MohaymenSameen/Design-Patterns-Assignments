@@ -21,14 +21,8 @@ namespace Assignment2
             noCard = new NoCardState(this);
             noCash = new NoCashState(this);
 
-            if (amountInMachine <= 0)
-            {
-                machineState = noCash;
-            }
-            else
-            {
-                machineState = cardPresent;
-            }
+            //starts with no card state
+            machineState = noCard;
         }
         public void EnterPincode(int pincode)
         {

@@ -28,7 +28,7 @@ namespace Assignment2
             Console.WriteLine();
         }
         public void WithdrawCash(int amount)
-        {            
+        {                       
             Console.WriteLine("{0} withdrawn from machine.", amount);
             Console.WriteLine();
         }
