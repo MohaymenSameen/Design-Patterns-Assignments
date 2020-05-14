@@ -14,20 +14,23 @@ namespace Assignment2
         public void InsertCard()
         {
             Console.WriteLine("Please enter your pincode");
+            Console.WriteLine();
         }
         public void RejectCard()
         {
             Console.WriteLine("Your card has been rejected");
+            Console.WriteLine();
         }
         public void EnterPincode(int pincode)
         {
             Console.WriteLine("You have entered the correct pincode.");
+            machine.SetMachineState(machine.GetCorrectPinState());
+            Console.WriteLine();
         }
         public void WithdrawCash(int amount)
-        {
-            //amount - machine amount
+        {            
             Console.WriteLine("{0} withdrawn from machine.", amount);
-            //if money in machine or not
+            Console.WriteLine();
         }
     }
 }
