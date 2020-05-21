@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Assignment1
 {
-    interface IProcessor
+    public interface IProcessor
     {
+        public void PerformOperation();
     }
 }

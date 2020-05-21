@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Assignment1
 {
-    interface IMonitor
+    public interface IMonitor
     {
+        public void Display();
     }
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Assignment1
 {
-    interface IHardDisk
+    public interface IHardDisk
     {
+        public void StoreData();
     }
 }

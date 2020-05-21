@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Assignment1
 {
-    class CheapProcessor
+    public class CheapProcessor : IProcessor
     {
+        public void PerformOperation()
+        {
+            Console.WriteLine("performing operation not so quickly...");
+        }
     }
 }

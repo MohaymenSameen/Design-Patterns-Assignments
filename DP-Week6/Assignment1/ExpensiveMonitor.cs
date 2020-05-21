@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Assignment1
 {
-    class ExpensiveMonitor
+    public class ExpensiveMonitor : IMonitor
     {
+        public void Display()
+        {
+            Console.WriteLine("displaying stuff very nice...");
+        }
     }
 }

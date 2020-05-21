@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Assignment1
 {
-    class ExpensiveHardDisk
+    public class ExpensiveHardDisk : IHardDisk
     {
+        public void StoreData()
+        {
+            Console.WriteLine("storing data very quickly...");
+        }
     }
 }
