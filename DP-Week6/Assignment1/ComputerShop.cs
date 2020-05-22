@@ -6,16 +6,17 @@ namespace Assignment1
 {
     public class ComputerShop
     {
-        public ComputerShop AssembleMachine()
+        public void AssembleMachine()
         {
-            IProcessor processor;
-            processor = pro
+            IHardDisk hardDisk = MakeHardDisk();
+            IMonitor monitor = MakeMonitor();
+            IProcessor processor = MakeProcessor();
+            processor.PerformOperation();
+            hardDisk.StoreData();
+            monitor.Display();
         }
-        public virtual CheapHardDisk MakeCheapHardDisk() { return new CheapHardDisk(); }
-        public virtual CheapMonitor MakeCheapMonitor() { return new CheapMonitor(); }
-        public virtual CheapProcessor MakeCheapProcessor() { return new CheapProcessor(); }
-        public virtual ExpensiveHardDisk MakeExpensiveHardDisk() { return new ExpensiveHardDisk(); }
-        public virtual ExpensiveMonitor MakeExpensiveMonitor() { return new ExpensiveMonitor(); }
-        public virtual ExpensiveProcessor MakeExpensiveProcessor() { return new ExpensiveProcessor(); }
+        public virtual IHardDisk MakeHardDisk() { return new CheapHardDisk(); }
+        public virtual IMonitor MakeMonitor() { return new CheapMonitor(); }
+        public virtual IProcessor MakeProcessor() { return new CheapProcessor(); }        
     }
 }

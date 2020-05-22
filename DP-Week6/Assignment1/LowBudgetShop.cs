@@ -6,15 +6,15 @@ namespace Assignment1
 {
     public class LowBudgetShop : ComputerShop
     {
-        public override CheapHardDisk MakeCheapHardDisk()
-        {
+        public override IHardDisk MakeHardDisk()
+        {            
             return new CheapHardDisk();
         }
-        public override CheapMonitor MakeCheapMonitor()
+        public override IMonitor MakeMonitor()
         {
             return new CheapMonitor();
         }
-        public override CheapProcessor MakeCheapProcessor()
+        public override IProcessor MakeProcessor()
         {
             return new CheapProcessor();
         }
