@@ -4,7 +4,19 @@ using System.Text;
 
 namespace Assignment1
 {
-    class LowBudgetShop
+    public class LowBudgetShop : ComputerShop
     {
+        public override CheapHardDisk MakeCheapHardDisk()
+        {
+            return new CheapHardDisk();
+        }
+        public override CheapMonitor MakeCheapMonitor()
+        {
+            return new CheapMonitor();
+        }
+        public override CheapProcessor MakeCheapProcessor()
+        {
+            return new CheapProcessor();
+        }
     }
 }
