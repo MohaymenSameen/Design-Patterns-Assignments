@@ -8,10 +8,10 @@ namespace Assignment1
     {
         private Logger logger;
         private SubSystem subSystem;
-        public MainSystem(Logger logger)
+        public MainSystem()
         {
-            this.logger = logger;
-            subSystem = new SubSystem(logger);
+            logger = Logger.GetInstance();
+            subSystem = new SubSystem();            
         }
         public void DoSomeMainWork()
         {

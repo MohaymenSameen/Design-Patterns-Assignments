@@ -12,7 +12,7 @@ namespace Assignment1
         void Start()
         {
             Logger logger = Logger.GetInstance();           
-            MainSystem mainSystem = new MainSystem(logger);
+            MainSystem mainSystem = new MainSystem();
             logger.Log("main", "starting");
             mainSystem.DoSomeMainWork();            
             logger.Log("main", "finishing");

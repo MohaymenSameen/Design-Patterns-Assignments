@@ -10,7 +10,7 @@ namespace Assignment1
         private static Logger uniqueInstance;        
         private Logger()
         {            
-            numberOfLines = 1;
+            numberOfLines = 0;
         }
         public static Logger GetInstance()
         {
@@ -22,8 +22,8 @@ namespace Assignment1
         }
         public void Log(string system, string message)
         {
-            Console.WriteLine("{0} - [{1}] {2}", numberOfLines, system, message);
             numberOfLines++;
+            Console.WriteLine("{0} - [{1}] {2}", numberOfLines, system, message);            
         }      
     }
 }

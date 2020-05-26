@@ -7,9 +7,9 @@ namespace Assignment1
     public class SubSystem
     {
         private Logger logger;
-        public SubSystem(Logger logger)
+        public SubSystem()
         {
-            this.logger = logger;
+            logger = Logger.GetInstance();
         }
         public void DoSomeWork()
         {
