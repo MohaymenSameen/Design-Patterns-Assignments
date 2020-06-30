@@ -6,7 +6,28 @@ namespace Assignment1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Program myprogram = new Program();
+            myprogram.Start();
+        }
+        void Start()
+        {
+            PrintHeader("[CreditCard]");
+            Payment ccPayment = new CreditCardPayment();
+            ccPayment.Execute();
+            PrintHeader("[PayPal]");
+            Payment ppPayment = new PayPalPayment();
+            ppPayment.Execute();
+            PrintHeader("[PIN]");
+            Payment pinPayment = new PINPayment();
+            pinPayment.Execute();
+
+            Console.ReadKey();
+        }
+        static void PrintHeader(string header)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(header);
+            Console.ResetColor();
         }
     }
 }
